@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 const port = 3000;
@@ -8,6 +9,8 @@ const dbName = 'todo-backend-db';
 const client = new MongoClient(url);
 
 var db;
+
+app.use(cors("*"))
 
 app.get('/', function(request, response) {  
     const toDos = db.collection("toDos");
