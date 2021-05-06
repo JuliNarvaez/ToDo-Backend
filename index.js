@@ -7,12 +7,12 @@ const port = 3000;
 
 const url = 'mongodb://localhost:27017';
 const dbName = 'todo-backend-db';
-const client = new MongoClient(url);
+const client = new MongoClient(url, {useUnifiedTopology: true});
 
 var db;
 
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 app.use(cors("*"))
 
