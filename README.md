@@ -1,4 +1,4 @@
-# HOW TO RUN THIS PROJECT:
+# How to run this project:
 
 ## Requirements:
 MongoDB
